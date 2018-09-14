@@ -21,7 +21,7 @@ services:
     image: remme/sawtooth:latest
     hostname: remme.validator
     volumes:
-      - validator_keys:/etc/sawtooth/keys
+      - user_keys:/etc/sawtooth/keys
       - chain_data:/var/lib/sawtooth/
       - ../../config/remme-genesis-config.toml:/config/remme-genesis-config.toml
       - ../../config/sawtooth-validator-config.toml:/etc/sawtooth/validator.toml
