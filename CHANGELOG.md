@@ -21,10 +21,7 @@ and this project adheres to
 ### Fixed
 - A couple of minor bugs in BlockInfo component.
 
-## [0.6.0-alpha] - 2018-09-13
-### Added
-- Send tokens to the specified address instead of burning them. This is the first step to implement the
-  economical model.
+## [0.5.1-alpha] - 2018-09-13
 ### Changes
 - Batches submitted from REST API are now signed by the key of the validator (the same as the key for
   block signing). This is required for compatibility with the upcoming update of Sawtooth which will
