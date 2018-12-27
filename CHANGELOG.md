@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to
 
+## [0.7.0-alpha] - 2018-12-27
+### Added
+- Support for ECDSA (secp256k1) and Ed25519 public key storing. Architecture of the corresponding
+  transaction family was redefined to make it easily extendable.
+- Finalized WebSockets implementation. You can connect to them using
+  `ws://YOUR_NODE_ADDRESS:YOUR_NODE_PORT/`. A few details:
+  - The message format is based on JSON RPC.
+  - You can track new blocks, batches, transactions statuses, transfers and atomic swap events.
+  - For more information please refer to
+    [documentation](https://docs.remme.io/remme-core/docs/rpc-api.html).
+
+### Changed
+- Testing framework was changed to `pytest` and custom validator mock was used to write tests
+  for transaction families. This makes our tests significantly faster and easier to use. For more
+  information please refer to [README.md].
+
 ## [0.6.0-alpha] - 2018-11-20
 ### Added
 - JSON RPC. This was introduced as replacement of REST API which is more consistent in terms of data
